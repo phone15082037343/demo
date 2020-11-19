@@ -6,6 +6,10 @@ spring:
     name: demo-eureka
   profiles:
     active: dev
+  security:
+    user:
+      name: admin
+      password: admin
 
 eureka:
   client:
