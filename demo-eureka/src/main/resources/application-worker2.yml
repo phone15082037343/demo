@@ -2,3 +2,5 @@ eureka:
   client:
     service-url:
       defaultZone: http://admin:admin@master:8761/eureka/,http://admin:admin@worker1:8761/eureka/
+  server:
+    enable-self-preservation: true
