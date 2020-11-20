@@ -11,6 +11,7 @@
         <module>demo-eureka</module>
         <module>demo-provider</module>
         <module>demo-client</module>
+        <module>demo-common</module>
     </modules>
     <packaging>pom</packaging>
 
@@ -24,6 +25,9 @@
         <spring.version>5.2.1.RELEASE</spring.version>
         <gson.version>2.8.6</gson.version>
         <jackson.version>2.10.0</jackson.version>
+        <lombok.version>1.18.12</lombok.version>
+        <druid.version>1.1.20</druid.version>
+        <postgresql.version>42.2.11</postgresql.version>
     </properties>
 
     <build>
@@ -74,6 +78,11 @@
                 <version>${spring-boot.version}</version>
             </dependency>
             <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-data-jpa</artifactId>
+                <version>${spring-boot.version}</version>
+            </dependency>
+            <dependency>
                 <groupId>com.google.code.gson</groupId>
                 <artifactId>gson</artifactId>
                 <version>${gson.version}</version>
@@ -82,6 +91,27 @@
                 <groupId>com.fasterxml.jackson.core</groupId>
                 <artifactId>jackson-core</artifactId>
                 <version>${jackson.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>com.fasterxml.jackson.core</groupId>
+                <artifactId>jackson-annotations</artifactId>
+                <version>${jackson.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
+                <scope>provided</scope>
+            </dependency>
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid</artifactId>
+                <version>${druid.version}</version>
+            </dependency>
+            <dependency>
+                <groupId>org.postgresql</groupId>
+                <artifactId>postgresql</artifactId>
+                <version>${postgresql.version}</version>
             </dependency>
         </dependencies>
     </dependencyManagement>
