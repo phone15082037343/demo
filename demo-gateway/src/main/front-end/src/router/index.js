@@ -74,15 +74,37 @@ export const constantRoutes = [{
   {
     path: '/user',
     component: Layout,
-    children: [{
-      path: 'manage',
-      name: 'Manage',
-      component: () => import('@/views/user/manage/index'),
-      meta: {
-        title: 'User manage',
-        icon: 'form'
+    children: [
+      {
+        path: 'manage',
+        name: 'Manage',
+        component: () => import('@/views/user/manage/index'),
+        meta: {
+          title: 'UserManage',
+          icon: 'form'
+        }
+      },
+      {
+        path: 'add',
+        name: 'UserAdd',
+        component: () => import('@/views/user/add/index'),
+        meta: {
+          title: 'UserAdd',
+          icon: 'form'
+        },
+        hidden: true
+      },
+      {
+        path: 'update',
+        name: 'UserUpdate',
+        component: () => import('@/views/user/update/index'),
+        meta: {
+          title: 'UserUpdate',
+          icon: 'form'
+        },
+        hidden: true
       }
-    }]
+    ]
   },
 
 

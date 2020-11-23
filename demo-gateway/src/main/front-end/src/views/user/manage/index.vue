@@ -72,24 +72,42 @@
         });
       },
       handleEdit(index, row) {
-        console.log(index, row);
+        // 跳转到更新页面
+        this.$router.push({
+          name: 'UserUpdate',
+          params: {
+            userId: row.userId
+          }
+        });
       },
       handleDelete(index, row) {
-        console.log(index, row);
+        request({
+          url: "/client/user/" + row.userId,
+          method: "delete"
+        }).then(response => {
+          var result = response.data;
+          if (result.success) {
+            this.loadTableData();
+          }
+        });
+      },
+      toAddPage() {
+        this.$router.push({
+          path: '/user/add'
+        });
       }
     },
     created() {
       this.loadTableData();
-    },
-    toAddPage() {
-      
     }
   }
 </script>
 <style scoped>
   .block {
     text-align: right;
+    margin-top: 10px;
   }
+
   .btns {
     margin-bottom: 10px;
   }
