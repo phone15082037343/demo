@@ -12,7 +12,7 @@
     <artifactId>demo-dashboard</artifactId>
 
     <build>
-        <finalName>platfrom-dashboard</finalName>
+        <finalName>demo-dashboard</finalName>
         <plugins>
             <!-- spring boot 打包插件 -->
             <plugin>
