@@ -6,3 +6,7 @@ spring:
     active: dev
   application:
     name: demo-client
+
+feign:
+  hystrix:
+    enabled: true
