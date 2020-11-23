@@ -19,6 +19,7 @@ public class UserController {
 		Result result = new Result();
 		result.setData(userClient.save(userRequest));
 		result.setSuccess(true);
+		result.setMessage("用户保存成功");
 		return result;
 	}
 
@@ -27,6 +28,7 @@ public class UserController {
 		Result result = new Result();
 		result.setData(userClient.deleteById(id));
 		result.setSuccess(true);
+		result.setMessage("用户删除成功");
 		return result;
 	}
 
