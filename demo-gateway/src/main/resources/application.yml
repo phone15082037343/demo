@@ -1,0 +1,16 @@
+server:
+  port: 8080
+
+spring:
+  application:
+    name: demo-gateway
+  profiles:
+    active: dev
+  resources:
+    static-locations: classpath:/static/, classpath:/templates/
+
+zuul:
+  routes:
+    demo-client:
+      path: /client/**
+  sensitive-headers:   # 转换的时候带上cookie
