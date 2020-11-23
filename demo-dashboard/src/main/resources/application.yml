@@ -1,0 +1,14 @@
+server:
+  port: 9210
+
+spring:
+  application:
+    name: demo-dashboard
+  profiles:
+    active: dev
+
+turbine:
+  app-config: demo-client
+  aggregator:
+    cluster-config: default
+  cluster-name-expression: new String("default")
